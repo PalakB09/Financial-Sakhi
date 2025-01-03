@@ -31,7 +31,7 @@ console.log(window.innerWidth)
     >
       <Link to="/" className="flex align-middle ">
         <GiSesame size={30} className="text-primary my-auto" />
-        <h1 className="my-auto ml-2">Samriddhi</h1>
+        <h1 className="my-auto ml-2">Financial Sakhi</h1>
       </Link>
       <div className="flex align-middle">
         {/* Mobile Menu Button */}
