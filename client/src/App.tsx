@@ -28,6 +28,10 @@ import Fund from "./pages/Fund/Fund";
 import Transactions from "./pages/Transactions";
 import Government from "./pages/Government";
 import AI from "./pages/AI";
+import Courses from './pages/Courses';
+import SmartMoneyBasics from "@/pages/smart-money-basics"; // Import the component
+import InvestingFundamentals from "@/pages/investing-fundamentals"; // Import the component
+
 
 function App() {
   return (
@@ -57,8 +61,14 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/courses" element={<Courses />} />
                 <Route path="/government" element={<Government />} />
                 <Route path="/ai" element={<AI />} />
+
+                {/* Add the new route */}
+                <Route path="/smart-money-basics" element={<SmartMoneyBasics />} />
+                <Route path="/investing-fundamentals" element={<InvestingFundamentals />} />
+
 
                 {/* Services */}
                 <Route path="/funds" element={<Funds />} />

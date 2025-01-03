@@ -9,7 +9,6 @@ const Navbar = () => {
   const isMobile = window.innerWidth < 768;
   const { isAuthenticated, logout } = useContext(AuthContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-console.log(window.innerWidth)
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -20,7 +19,7 @@ console.log(window.innerWidth)
   const handleLogout = async () => {
     await logout();
     navigate("/login");
-  }
+  };
 
   return (
     <motion.nav
@@ -31,7 +30,7 @@ console.log(window.innerWidth)
     >
       <Link to="/" className="flex align-middle ">
         <GiSesame size={30} className="text-primary my-auto" />
-        <h1 className="my-auto ml-2">Financial Sakhi</h1>
+        <h1 className="my-auto ml-2">Samriddhi</h1>
       </Link>
       <div className="flex align-middle">
         {/* Mobile Menu Button */}
@@ -57,21 +56,24 @@ console.log(window.innerWidth)
             )}
           </svg>
         </button>
-        {!isMobile &&
-              <div className="flex align-middle mx-4 my-auto">
-              <ul className="flex my-auto">
-                <li className="mx-4">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="mx-4">
-                  <Link to="/services">Services</Link>
-                </li>
-                <li className="mx-4">
-                  <Link to="/transactions">Transactions</Link>
-                </li>
-              </ul>
-            </div>
-        }
+        {!isMobile && (
+          <div className="flex align-middle mx-4 my-auto">
+            <ul className="flex my-auto">
+              <li className="mx-4">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="mx-4">
+                <Link to="/services">Services</Link>
+              </li>
+              {/* <li className="mx-4">
+                <Link to="/transactions">Transactions</Link>
+              </li> */}
+              <li className="mx-4">
+                <Link to="/courses">Courses</Link>
+              </li>
+            </ul>
+          </div>
+        )}
 
         {/* Mobile Menu Links */}
         {mobileMenuOpen && isMobile && (
@@ -95,6 +97,11 @@ console.log(window.innerWidth)
               <li className="my-2 lg:my-0 lg:mx-4 bg-white/10 px-4 py-2 w-5/6">
                 <Link to="/transactions" onClick={toggleMobileMenu}>
                   Transactions
+                </Link>
+              </li>
+              <li className="my-2 lg:my-0 lg:mx-4 bg-white/10 px-4 py-2 w-5/6">
+                <Link to="/courses" onClick={toggleMobileMenu}>
+                  Courses
                 </Link>
               </li>
               <li className="flex justify-end bg-white/0 px-4 py-2 w-5/6">
@@ -121,7 +128,7 @@ console.log(window.innerWidth)
         {/* Auth Buttons */}
         {isAuthenticated ? (
           <button
-            onClick={logout}
+            onClick={handleLogout}
             className="hidden lg:block bg-primary hover:bg-[#e37655] text-black px-8 py-2 rounded-lg mx-4 my-auto"
           >
             Logout
