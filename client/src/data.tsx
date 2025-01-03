@@ -1,4 +1,4 @@
-const appName = "Samriddhi";
+const appName = "Financial Sakhi";
 
 
 export { appName };
