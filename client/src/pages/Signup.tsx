@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SignupFormDemo } from "@/components/auth/SignupForm";
 import { Atropos } from "atropos/react";
-import SignupImage from "@/assets/signup.svg";
+import SignupImage from "@/assets/1234.png";
 const animationProps = {
   initial: { x: 0, rotateY: 180, scale: 0.85 },
   animate: { x: 0, rotateY: 0, scale: 1, transition: { duration: 1.2 } },
@@ -13,16 +13,17 @@ const Signup = () => {
       {...animationProps}
       className="pt-12 md:max-h-screen overflow-hidden md:flex"
     >
-      <div className="flex justify-center align-middle md:w-1/2  hover:opacity-70">
+      <div className="flex justify-center align-middle md:w-1/2  hover:opacity-90">
         <Atropos
           activeOffset={70}
+          shadow={false}
           shadowScale={1.05}
           onEnter={() => console.log("Enter")}
           onLeave={() => console.log("Leave")}
           onRotate={(x, y) => console.log("Rotate", x, y)}
           className="m-auto "
         >
-          <img src={SignupImage} className="transform -scale-x-100 md:max-w-96 max-w-44" />
+          <img src={SignupImage} className="transform -scale-x-100 md:max-w-1500 max-w-50" />
         </Atropos>
       </div>
       <div className="flex justify-center align-middle md:mt-0 mt-12">

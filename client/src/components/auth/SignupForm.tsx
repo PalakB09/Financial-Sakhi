@@ -35,7 +35,7 @@ export function SignupFormDemo() {
     <div className="w-full md:px-16 px-4 my-auto">
       <div className="w-full rounded-none md:rounded-2xl p-10 shadow-input bg-black/50">
         <h2 className="font-bold text-xl text-neutral-200">
-          Welcome to {appName}
+          Welcome to {appName} !
         </h2>
         <p className="text-sm max-w-sm mt-2 dark:text-neutral-300">
           Sign up to {appName}. Start earning now.
@@ -48,7 +48,7 @@ export function SignupFormDemo() {
               <Input
                 ref={fullnameRef}
                 id="fullname"
-                placeholder="Tyler"
+                placeholder="Sakhi"
                 type="text"
               />
             </LabelInputContainer>
@@ -58,7 +58,7 @@ export function SignupFormDemo() {
             <Input
               ref={emailRef}
               id="email"
-              placeholder="projectmayhem@fc.com"
+              placeholder="abc@example.com"
               type="email"
             />
           </LabelInputContainer>
@@ -101,18 +101,18 @@ export function SignupFormDemo() {
           </button>
           <p className="text-xs text-neutral-300 mt-4">
             By signing up, you agree to our{" "}
-            <a href="#" className="text-orange-500">
+            <a href="#" className="text-rose-300">
               Terms of Service
             </a>{" "}
             and{" "}
-            <a href="#" className="text-orange-500">
+            <a href="#" className="text-rose-300">
               Privacy Policy
             </a>
             .
           </p>
           <p className="text-xs text-neutral-300 mt-4">
             Already have an account?{" "}
-            <Link to="/login" className="text-orange-500">
+            <Link to="/login" className="text-rose-300">
               Log in
             </Link>
           </p>
