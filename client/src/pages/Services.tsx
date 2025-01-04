@@ -16,7 +16,7 @@ const Services = () => {
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="text-4xl font-bold text-start text-white my-10 ml-5"
+        className="text-4xl font-bold text-start text-darkerText my-10 ml-5"
       >
         Services
       </motion.h1>

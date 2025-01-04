@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import AuthContext from "@/context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import SakhiLogo from "@/assets/logo_sakhi.png";
 
 const Navbar = () => {
   const isMobile = window.innerWidth < 768;
@@ -30,7 +31,8 @@ const Navbar = () => {
     >
       <Link to="/" className="flex align-middle ">
         <GiSesame size={30} className="text-primary my-auto" />
-        <h1 className="my-auto ml-2">Samriddhi</h1>
+        <h1 className="my-auto ml-2">Financial Sakhi</h1>
+        <img src={SakhiLogo} alt="My Logo" className="w-10 h-7" />
       </Link>
       <div className="flex align-middle">
         {/* Mobile Menu Button */}
