@@ -9,7 +9,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 
-import _8 from "@/assets/8.jpg";
+import _8 from "@/assets/3.jpg";
 import _9 from "@/assets/9.jpg";
 import _10 from "@/assets/10.jpg";
 import _11 from "@/assets/11.jpg";
