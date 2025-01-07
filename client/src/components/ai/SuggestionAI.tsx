@@ -21,7 +21,7 @@ const SuggestionAI = () => {
   return (
     <div className="w-full">
       <div className="bg-white/10 rounded-2xl p-4 flex align-middle justify-between">
-        <h1 className="my-auto">Get AI Suggestion</h1>
+        <h1 className="my-auto">Your Budgeting Calculator</h1>
         <button onClick={handleAI} className="p-3 rounded-full bg-orange-500 flex ">
           <GrMagic size={20} className="text-white mx-auto" />
         </button>

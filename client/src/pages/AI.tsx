@@ -63,7 +63,7 @@ const AI = () => {
             transition={{duration: 1, delay: 0.6}}
             type="number"
             placeholder="Income"
-            className="w-full p-2 rounded-lg bg-black/20"
+            className="w-full p-2 rounded-lg bg-black/20 placeholder:text-black"
             />
             <motion.input
             ref={ageRef}
@@ -72,7 +72,7 @@ const AI = () => {
             transition={{duration: 1, delay: 0.8}}
             type="number"
             placeholder="Age"
-            className="w-full p-2 rounded-lg mt-4 bg-black/20"
+            className="w-full p-2 rounded-lg mt-4 bg-black/20 placeholder:text-black"
             />
             <motion.input
             ref={dependentsRef}
@@ -81,14 +81,14 @@ const AI = () => {
             transition={{duration: 1, delay: 1}}
             type="number"
             placeholder="Dependents"
-            className="w-full p-2 rounded-lg mt-4 bg-black/20"
+            className="w-full p-2 rounded-lg mt-4 bg-black/20 placeholder:text-black"
             />
             <motion.button
             onClick={handleSearch}
             initial={{x: -200, opacity: 0}}
             animate={{x: 0, opacity: 1}}
             transition={{duration: 1, delay: 1.2}}
-            className="bg-primary text-white p-2 rounded-lg mt-4 w-full">
+            className="bg-primary text-white p-2 rounded-lg mt-4 w-full placeholder:text-black">
               Search
             </motion.button>
           </div>
@@ -96,7 +96,7 @@ const AI = () => {
           initial={{y: -50, opacity: 0}}
           animate={{y: 0, opacity: 1}}
           transition={{duration: 1, delay: 0.1}}
-          className="bg-white/10 mt-4 rounded-2xl p-6">
+          className="bg-white/10 mt-4 rounded-2xl p-6 placeholder:text-black">
             <h1>
               MAX AMOUNT: ₹ {maxAmount.toFixed(2)}
             </h1>
