@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ setLanguage }) => {
   <span className="text-sm font-medium text-gray-700"></span>
   <select
     onChange={(e) => handleLanguageChange(e.target.value as 'en' | 'hi')}
-    className="bg-primary text-black px-3 py-1 text-sm font-medium rounded-md border border-gray-300 shadow focus:outline-none"
+    className="bg-pinky text-black px-3 py-1 text-sm font-medium rounded-md border border-gray-300 shadow focus:outline-none"
   >
     <option value="en">English</option>
     <option value="en">Tamil</option>
@@ -77,14 +77,14 @@ const Navbar: React.FC<NavbarProps> = ({ setLanguage }) => {
         {isAuthenticated ? (
           <button
             onClick={handleLogout}
-            className="bg-primary hover:bg-[#e37655] text-black px-8 py-2 rounded-lg mx-4"
+            className="bg-pinky hover:bg-[#e37655] text-black px-8 py-2 rounded-lg mx-4"
           >
             Logout
           </button>
         ) : (
           <Link
             to="/signup"
-            className="bg-primary hover:bg-[#e37655] text-black px-4 py-2 rounded-lg ml-4"
+            className="bg-pinky hover:bg-[#e37655] text-black px-4 py-2 rounded-lg ml-4"
           >
             Get Started
           </Link>
