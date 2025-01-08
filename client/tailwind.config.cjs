@@ -13,12 +13,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FB928E",
+        primary: "#c18b9e",
         secondary: "#FFD8CC",
         c1: "#FFB8BF",
         c2 : "#FBC4BF",
         c3 : "#FB9AAC",
-        darkerText : "#570029"
+        darkerText : "#570029",
+        pinky: "#FB928E"
       },
       boxShadow: {
         input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
