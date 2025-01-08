@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import "atropos/css";
+import  { useState } from 'react';
 
 import Home from "@/pages/Home";
 import Navbar from "@/components/Navbar";
@@ -20,22 +20,23 @@ import JoinFund from "@/pages/Fund/JoinFund";
 import { FundState } from "@/context/FundContext";
 import Deposit from "@/pages/Banking/Deposit";
 import Withdraw from "@/pages/Banking/Withdraw";
-import Loans from "./pages/Loans";
-import RequestLoan from "./pages/Loan/RequestLoan";
-import { LoanState } from "./context/LoanContext";
-import Success from "./pages/Success";
-import Fund from "./pages/Fund/Fund";
-import Transactions from "./pages/Transactions";
-import Government from "./pages/Government";
-import AI from "./pages/AI";
-import Courses from './pages/Courses';
-import SmartMoneyBasics from "@/pages/smart-money-basics"; // Import the component
-import InvestingFundamentals from "@/pages/investing-fundamentals"; // Import the component
-
+import Loans from "@/pages/Loans";
+import RequestLoan from "@/pages/Loan/RequestLoan";
+import { LoanState } from "@/context/LoanContext";
+import Success from "@/pages/Success";
+import Fund from "@/pages/Fund/Fund";
+import Transactions from "@/pages/Transactions";
+import Government from "@/pages/Government";
+import AI from "@/pages/AI";
+import Courses from "@/pages/Courses";
+import SmartMoneyBasics from "@/pages/smart-money-basics";
+import InvestingFundamentals from "@/pages/investing-fundamentals";
 
 function App() {
+  const [language, setLanguage] = useState<'en' | 'hi'>('en');
   return (
     <>
+      {/* Toast Notifications */}
       <ToastContainer
         position="top-right"
         autoClose={1200}
@@ -47,50 +48,59 @@ function App() {
         pauseOnHover
         limit={2}
       />
+
+      {/* Dynamic Background */}
       <DynamicBackground />
+
       <GlobalState>
         <Loading />
         <AuthState>
           <FundState>
             <LoanState>
-          <div className="py-6 md:px-12 px-4">
-            <Router>
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/government" element={<Government />} />
-                <Route path="/ai" element={<AI />} />
+              <div className="py-6 md:px-12 px-4">
+                <Router>
+                  {/* Navbar */}
+                  <Navbar setLanguage={setLanguage} />
 
-                {/* Add the new route */}
-                <Route path="/smart-money-basics" element={<SmartMoneyBasics />} />
-                <Route path="/investing-fundamentals" element={<InvestingFundamentals />} />
+                  {/* Application Routes */}
+                  <Routes>
+                    {/* Home and Authentication */}
+                    <Route path="/" element={<Home language={language}/>} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
 
+                    {/* Services */}
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/courses" element={<Courses />} />
+                    <Route path="/government" element={<Government />} />
+                    <Route path="/ai" element={<AI />} />
 
-                {/* Services */}
-                <Route path="/funds" element={<Funds />} />
-                <Route path="/createfund" element={<CreateFund />} />
-                <Route path="/joinfund/:id" element={<JoinFund />} />
-                <Route path="/fund/:id" element={<Fund />} />
-                <Route path="/transactions" element={<Transactions />} />
+                    {/* Financial Education */}
+                    <Route path="/smart-money-basics" element={<SmartMoneyBasics />} />
+                    <Route path="/investing-fundamentals" element={<InvestingFundamentals />} />
 
-                {/* Banking */}
-                <Route path="/deposit" element={<Deposit />} />
-                <Route path="/withdraw" element={<Withdraw />} />
+                    {/* Funds */}
+                    <Route path="/funds" element={<Funds />} />
+                    <Route path="/createfund" element={<CreateFund />} />
+                    <Route path="/joinfund/:id" element={<JoinFund />} />
+                    <Route path="/fund/:id" element={<Fund />} />
+                    <Route path="/transactions" element={<Transactions />} />
 
-                {/* Loans */}
-                <Route path="/loans" element={<Loans />} />
-                <Route path="/getloan" element={<RequestLoan />} />
+                    {/* Banking */}
+                    <Route path="/deposit" element={<Deposit />} />
+                    <Route path="/withdraw" element={<Withdraw />} />
 
-                <Route path="*" element={<_404 />} />
-                <Route path="/success" element={<Success/>} />
-              </Routes>
-            </Router>
-          </div>
-          </LoanState>
+                    {/* Loans */}
+                    <Route path="/loans" element={<Loans />} />
+                    <Route path="/getloan" element={<RequestLoan />} />
+
+                    {/* Miscellaneous */}
+                    <Route path="/success" element={<Success />} />
+                    <Route path="*" element={<_404 />} />
+                  </Routes>
+                </Router>
+              </div>
+            </LoanState>
           </FundState>
         </AuthState>
       </GlobalState>
