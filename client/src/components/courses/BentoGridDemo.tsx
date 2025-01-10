@@ -40,7 +40,7 @@ interface SkeletonProps {
   img: any;
 }
 const Skeleton:React.FunctionComponent<SkeletonProps> = ({img}) => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] opacity-50 rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full h-full min-h-[8.4rem] opacity-100 rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img src={img} alt="skeleton" className="w-full h-full" />
   </div>
 );
