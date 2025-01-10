@@ -52,7 +52,7 @@ const ChatInterface = () => {
               </div>
               <div className="flex flex-row items-center h-16 rounded-xl bg-white/10 w-full px-4">
                 <div>
-                  <button className="flex items-center justify-center text-gray-400 hover:text-gray-100">
+                  <button className="flex items-center justify-center text-black-400 hover:text-gray-100">
                     <GoPaperclip size={25} />
                   </button>
                 </div>
@@ -61,10 +61,10 @@ const ChatInterface = () => {
                     <input
                       type="text"
                       ref={messageRef}
-                      className="flex w-full border rounded-xl focus:outline-none text-white bg-white/10 focus:border-indigo-300 pl-4 h-10"
+                      className="flex w-full border rounded-xl focus:outline-none text-black bg-white/10 focus:border-indigo-300 pl-4 h-10"
                       placeholder="Type your message here..."
                     />
-                    <button className="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-400 hover:text-gray-600">
+                    <button className="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-black-400 hover:text-gray-600">
                       <HiOutlineFaceSmile size={30} />
                     </button>
                   </div>
@@ -72,7 +72,7 @@ const ChatInterface = () => {
                 <div className="ml-4">
                   <button
                     onClick={handleSubmit}
-                    className="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
+                    className="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-black px-4 py-1 flex-shrink-0"
                   >
                     <span>Send</span>
                     <span className="ml-2">
