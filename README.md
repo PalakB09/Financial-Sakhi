@@ -20,18 +20,7 @@ Financial Sakhi is a full-stack financial application built using the MERN stack
 12. **Risk Assessment for Loan Amount:** Assess loan amounts based on risk factors and user data.
 13. **Mostly Responsive Design (Both PC and Mobile View):** Ensures a responsive design for both desktop and mobile users.
 
-## UI
-### Desktop Landing Page
-<img src="./screenshots/1.png" />
 
-### Get Government Schemes
-<img src="./screenshots/2.png" />
-
-### Mobile Views
-<div style="display: flex; justify-content: space-between;">
-   <img src="./screenshots/3.jpeg" style="width: 25%;" />
-   <img src="./screenshots/4.jpeg" style="width: 25%;" />
-</div>
 
 ## Technologies Used
 
@@ -40,44 +29,7 @@ Financial Sakhi is a full-stack financial application built using the MERN stack
 - **Database:** MongoDB
 - **Authentication:** JWT (JSON Web Tokens)
 - **Security:** HTTPS, Secure PINs, Voice Recognition
-
-## Getting Started
-
-To run the application locally, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/whysosaket/samriddhi.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd samriddhi
-   ```
-
-3. Install dependencies for both frontend and backend:
-   ```bash
-   cd client
-   npm install
-
-   cd ../server
-   npm install
-   ```
-
-4. Set up environment variables:
-   - Create a `.env` file in the backend directory.
-   - Add necessary environment variables (e.g., MongoDB URI, JWT secret, etc.).
-
-5. Start the development server for both frontend and backend:
-   ```bash
-   cd client
-   npm run dev
-
-   cd ../server
-   npm run dev
-   ```
-
-6. Access the application in your browser at `http://localhost:5173`.
+ 
 
 ---
 
