@@ -45,7 +45,7 @@ export const BentoGridItem = ({
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: itemNumber * 0.3 }}
       className={cn(
-        "row-span-1 rounded-xl cursor-pointer group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black/30 dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 rounded-xl cursor-pointer group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black/30 dark:border-white/[0.2] bg-white border border-black justify-between flex flex-col space-y-4",
         className
       )}
       onClick={() => navigate(link)}
