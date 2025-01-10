@@ -31,6 +31,4 @@ Financial Sakhi is a full-stack financial application built using the MERN stack
 - **Security:** HTTPS, Secure PINs, Voice Recognition
  
 
----
 
-Feel free to customize and expand upon this README as needed for your project documentation. If you have any specific requirements or questions, let me know!
