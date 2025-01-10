@@ -71,6 +71,11 @@ const Navbar: React.FC<NavbarProps> = ({ setLanguage }) => {
           <li className="mx-4">
             <Link to="/courses">Courses</Link>
           </li>
+          <li className="mx-4">
+                <a href="https://finance-game-drab.vercel.app/roadmap" onClick={toggleMobileMenu}>
+                  Games
+                </a>
+          </li>
         </ul>
 
         {/* Authenticated User Buttons */}
@@ -122,6 +127,11 @@ const Navbar: React.FC<NavbarProps> = ({ setLanguage }) => {
           >
             Courses
           </Link>
+          <li className="my-2 lg:my-0 lg:mx-4 bg-white/10 px-4 py-2 w-5/6">
+                <a href="https://finance-game-drab.vercel.app/roadmap" onClick={toggleMobileMenu}>
+                  Games
+                </a>
+            </li>
           {isAuthenticated ? (
             <button
               onClick={handleLogout}
@@ -136,6 +146,7 @@ const Navbar: React.FC<NavbarProps> = ({ setLanguage }) => {
             >
               Get Started
             </Link>
+          
           )}
         </div>
       )}
